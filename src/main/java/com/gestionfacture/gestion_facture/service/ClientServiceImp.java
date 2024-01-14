@@ -3,6 +3,7 @@ package com.gestionfacture.gestion_facture.service;
 import com.gestionfacture.gestion_facture.Dao.ClientDao;
 import com.gestionfacture.gestion_facture.dto.ClientRequestDto;
 import com.gestionfacture.gestion_facture.dto.ClientResponseDto;
+import com.gestionfacture.gestion_facture.exception.EntityNotFoundException;
 import com.gestionfacture.gestion_facture.models.ClientEntity;
 import org.modelmapper.ModelMapper;
 import org.springframework.data.crossstore.ChangeSetPersister;
@@ -35,7 +36,7 @@ public class ClientServiceImp implements  ClientService{
     @Override
     public ClientResponseDto findById(Integer id) {
 
-        ClientEntity clientEntity = clientDao.findById(id).orElse(null);
+        ClientEntity clientEntity = clientDao.findById(id).orElseThrow(()->new EntityNotFoundException("Client Not Found"));
         return modelMapper.map(clientEntity,ClientResponseDto.class);
     }
 
@@ -61,7 +62,7 @@ public class ClientServiceImp implements  ClientService{
 
            return modelMapper.map(updated,ClientResponseDto.class);
        }else {
-           return null;
+           throw new EntityNotFoundException("Client Not Found");
        }
 
     }
