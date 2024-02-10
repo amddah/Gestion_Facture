@@ -1,0 +1,59 @@
+{
+	"info": {
+		"_postman_id": "54d67023-e951-4d44-ac8c-995e60c608eb",
+		"name": "GestionFacture",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "32087315"
+	},
+	"item": [
+		{
+			"name": "Client Request",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Add client",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Update client",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Find By Id",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Delete",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "find By Nom",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8080/clients/nom/abdo"
+			},
+			"response": []
+		}
+	]
+}
