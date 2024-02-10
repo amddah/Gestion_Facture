@@ -1,10 +1,11 @@
-package com.gestionfacture.gestion_facture.service;
+package com.gestionfacture.gestion_facture.service.implement;
 
 import com.gestionfacture.gestion_facture.Dao.ProduitDao;
 import com.gestionfacture.gestion_facture.dto.ProduitDto;
 import com.gestionfacture.gestion_facture.exception.EntityAlreadyExistsException;
 import com.gestionfacture.gestion_facture.exception.EntityNotFoundException;
 import com.gestionfacture.gestion_facture.models.ProduitEntity;
+import com.gestionfacture.gestion_facture.service.ProduitService;
 import lombok.AllArgsConstructor;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
@@ -16,7 +17,7 @@ import java.util.stream.Collectors;
 
 @Service
 @AllArgsConstructor
-public class ProuitServiceImp implements ProduitService{
+public class ProuitServiceImp implements ProduitService {
 
     private  ProduitDao produitDao;
     private ModelMapper modelMapper;

@@ -1,10 +1,11 @@
-package com.gestionfacture.gestion_facture.service;
+package com.gestionfacture.gestion_facture.service.implement;
 
 import com.gestionfacture.gestion_facture.Dao.ClientDao;
 import com.gestionfacture.gestion_facture.dto.ClientRequestDto;
 import com.gestionfacture.gestion_facture.dto.ClientResponseDto;
 import com.gestionfacture.gestion_facture.exception.EntityNotFoundException;
 import com.gestionfacture.gestion_facture.models.ClientEntity;
+import com.gestionfacture.gestion_facture.service.ClientService;
 import org.modelmapper.ModelMapper;
 import org.springframework.data.crossstore.ChangeSetPersister;
 import org.springframework.stereotype.Service;
@@ -14,7 +15,7 @@ import java.util.Optional;
 import java.util.stream.Collectors;
 
 @Service
-public class ClientServiceImp implements  ClientService{
+public class ClientServiceImp implements ClientService {
 
     private ClientDao clientDao;
     private ModelMapper modelMapper;
