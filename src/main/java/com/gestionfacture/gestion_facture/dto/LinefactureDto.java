@@ -1,2 +1,13 @@
-package com.gestionfacture.gestion_facture.dto;public class LinefactureDto {
+package com.gestionfacture.gestion_facture.dto;
+
+import lombok.Getter;
+import lombok.Setter;
+
+@Getter
+@Setter
+public class LinefactureDto {
+
+    private String refproduit;
+
+    private Integer quantite;
 }

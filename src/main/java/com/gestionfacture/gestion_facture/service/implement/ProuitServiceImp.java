@@ -24,8 +24,6 @@ public class ProuitServiceImp implements ProduitService {
     @Override
     public ProduitDto save(ProduitDto produitDto) {
 
-        if (findByRef(produitDto.getRef())!= null) throw new EntityAlreadyExistsException("product Already exist !");
-
         ProduitEntity produitEntity = modelMapper.map(produitDto,ProduitEntity.class);
         ProduitEntity saved = produitDao.save(produitEntity);
 

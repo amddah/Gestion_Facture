@@ -1,5 +1,6 @@
 package com.gestionfacture.gestion_facture.models;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -35,6 +36,7 @@ public class ProduitEntity implements Serializable {
     private double quantite_stock;
 
     @OneToMany(mappedBy = "produit",fetch = FetchType.LAZY,cascade = CascadeType.ALL)
+    @JsonBackReference
     private List<LineFactureEntity> lineFactures;
 
 }

@@ -12,8 +12,10 @@ import java.math.BigDecimal;
 public class ProduitDto {
 
 
-    private String libille;
 
+    private Integer id;
+
+    private String libille;
 
     private String ref;
 
